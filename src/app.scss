@@ -1,0 +1,122 @@
+
+$backgroundColor:  #212738;
+$quoteBox: rgba(232, 232, 232, 0.43);
+$bgQuoteBtn: rgba(232, 232, 232, 0.1);
+$bgQuoteHover: rgba(232, 232, 232, 0.6);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+body{
+    background-image: linear-gradient(to right, #212738, #00577b, #008f98, #00c377, #a8eb12);
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    margin: 0 auto;
+    text-align: center;
+    width: 18ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    border-right: 4px solid white;
+    animation: typing-title 2s steps(20), blink-title 1s infinite ease-in-out;
+    animation-delay: 0.1s
+
+}
+
+@keyframes typing-title {
+    from {
+        width: 0
+    }
+}
+      
+@keyframes blink-title {
+    to {
+        border-color: transparent
+    }
+}
+
+
+
+#quote-box{
+    max-width: 550px;
+    background: $quoteBox;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    backdrop-filter: blur(2.7px);
+    -webkit-backdrop-filter: blur(2.7px);
+    text-align: justify;
+    padding: 35px;
+    margin: 20px;
+    border-radius: 10px;
+    font-weight: 450;
+
+
+
+}
+
+#text{
+    font-size: larger;
+    
+}
+
+#text, #author{
+    color: black;
+}
+
+#author{
+    font-size: small;
+    font-style: italic;
+    text-align: end;
+    font-weight: 400;
+    
+}
+
+#new-quote{
+    font-family: 'Playfair Display', serif;
+    color: black;
+   
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: 700;
+    background-color: $bgQuoteBtn;
+    padding: 8px;
+    border-radius: 6px;
+    backdrop-filter: blur(7px);
+    position: sticky;
+    left: 100vw;
+    margin-top: 10px;
+    
+    
+}
+
+#new-quote:hover{
+    background-color: $bgQuoteHover;
+    cursor: pointer;
+}
+
+#tweet-quote{
+    color: black;
+    font-size: large;
+}
+
+#tweet-quote:hover{
+    cursor:pointer;
+    
+
+}
+
